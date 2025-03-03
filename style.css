@@ -1,0 +1,530 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@400;700&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Navbar */
+.Navbar {
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: black;
+    padding: 0 1rem;
+}
+
+.Navbar .logo img {
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar span {
+    height: 3rem;
+    width: 3rem;
+    background-color: #1f1f1f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    animation: all 0.4s;
+}
+.search-bar span:hover{
+    transform: scale(1.1);
+}
+
+.search-box {
+    background-color: #1f1f1f;
+    height: 3rem;
+    width: 30rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.search-box input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    font-size: 1rem;
+    color: white;
+    flex: 1;
+}
+
+.search-box input::placeholder {
+    color: white;
+    opacity: 0.8;
+}
+
+/* Buttons */
+.login-bar .btn {
+    background-color: black;
+    border: none;
+    padding: 1rem 2rem;
+    color: white;
+    font-size: 1rem;
+    opacity: 0.7;
+    cursor: pointer;
+    animation: all 0.4s;
+}
+.login-bar .btn:hover{
+    transform: scale(1.01);
+    opacity: 1;
+}
+
+.login-bar .btn1 {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    animation: all 0.4s;
+}
+.login-bar .btn1:hover{
+    transform: scale(1.03);
+}
+
+/* Main Layout */
+.container {
+    display: flex;
+    flex: 1;
+    margin-top: 9vh; /* Push down below Navbar */
+    height: calc(100vh - 9vh - 8vh); /* Remaining space after navbar & playback */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 30vw;
+    background-color: #1f1f1f;
+    border-radius: 1em;
+    padding: 1rem;
+}
+.library {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+#plush{
+    margin-left: 15rem;
+    cursor: pointer;
+
+}
+#plush :hover{
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #302e2e;
+    border-radius: 50%;
+}
+.library img {
+    height: 1rem;
+    width: 1rem;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.library h3{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.library h3:hover{
+    opacity: 1;
+}
+.library img:hover{
+    opacity: 1;
+}
+#sidebar-box{
+    height: 20vh;
+    background-color: rgb(40, 39, 39);
+    width: 100%;
+    border-radius: 0.5rem;
+    line-height: 2rem;
+    padding-left:  1rem;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+.btn2{
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    cursor: pointer;
+    animation: all 0.4s;
+}
+.btn2:hover{
+    transform: scale(1.02);
+}
+.sidebar-footer{
+    margin-top: 1rem;
+    padding: 1rem 0.5rem;
+    line-height: 1.5rem;
+}
+.sidebar-footer a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.6rem;
+    opacity: 0.7;
+    margin: 0.5rem;
+}
+.sidebar h6:hover{
+    text-decoration: underline;
+    
+}
+.btn3{
+    height: 2rem;
+    width: 6rem;
+    margin: 2rem 1rem;
+    border-radius: 1rem;
+    padding: 0 3.5rem;
+    border: 1px solid white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background-color: #1f1f1f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.btn3:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 5px rgb(187, 182, 182);
+
+
+}
+.btn3 button{
+    background-color: transparent;
+   border: none;
+   outline: none;
+   color: rgb(148, 144, 144);
+}
+.btn3 img{
+    height: 1.3rem;
+    color: white;
+     margin: 0.2rem;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    background-color: #1f1f1f;
+    border-radius: 1rem;
+    margin-left: 0.5rem;
+    padding: 0.8rem;
+    overflow: auto;
+}
+.main-content h2{
+    margin-left: 0.8rem;
+}
+.main-content 
+.artist{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+.main-content .card{
+    height: 14rem;
+    width: 12rem;
+    padding: 0 1rem;
+    
+   
+}
+
+/* play icon in card */
+
+/* .main-content .card i{
+    font-size: 2rem;
+    transform: translateX(8rem);
+     display: none;
+    
+    
+}
+.main-content .card i:hover{
+    display: block;
+} */
+
+
+
+.main-content .card .img2{
+    height: 2rem;
+    width: 2rem;
+}
+.main-content .card:hover{
+    background-color: #272525;
+    border-radius: 0.4rem;
+
+   
+}
+
+.card h5{
+    font-size: 1rem;
+
+}
+.card p{
+    font-size: 0.7rem;
+
+}
+.card img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.albums-car{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-evenly;
+}
+.card2{
+    height: 14rem;
+    width: 11rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 1rem;
+}
+.card2:hover{
+    background-color:#312f2f ;
+    border-radius: 0.4rem;
+
+}
+.card2 img{
+    height:10rem;
+    width: 10rem;
+    border-radius: 0.4rem;
+}
+.card2 p{
+    font-size: 0.7rem;
+}
+.radio{
+    display: flex;
+    padding: 1rem ;
+    justify-content: space-evenly;
+}
+.feature-chart{
+    display: flex;
+    padding: 1rem ;
+    justify-content: space-evenly;
+}
+.best-artist{
+    display: flex;
+    padding: 1rem ;
+    justify-content: space-evenly;
+
+}
+.main-footer{
+    margin-top: 5rem;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.main-footer li {
+    list-style: none;
+}
+.main-footer li a{
+    text-decoration: none;
+    color: white;
+    opacity: 0.7;
+    line-height: 2rem;
+    font-size: 0.9rem;
+
+}
+.main-footer li a:hover{
+    text-decoration: underline;
+}
+.main-footer .list4{
+    display: flex;
+    /* align-items: center; */
+}
+.main-footer .list4 span{
+    margin: 0.5rem;
+    background-color: #302e2e;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.main-footer2{
+    display: flex;
+    justify-content: center;
+
+}
+.footer-line{
+    height: 1rem;
+    width: 90%;
+    border-top: 1px solid #4b4a4a ;
+}
+.mai-footer3{
+    height: 8rem;
+    padding: 2rem 3rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Playback Bar */
+.play-back {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* first */
+.music-img {
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.music-img .music-img1 img{
+    height: 2rem;
+    margin: 1rem;
+}
+.music-img-text h5{
+    font-size: 0.8rem;
+}
+.music-img-text p{
+    font-size: 0.7rem;
+}
+.music-img2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+#music-img2-img1{
+    height: 1.5rem;
+    margin: 0.5rem;
+}
+#music-img2-img2{
+    height: 2rem;
+}
+/* Second */
+.music-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 60%; */
+}
+.music-bar-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.4rem;
+}
+#music-bar-img1{
+    height: 2rem;
+}
+.music-bar-img img{
+    height: 0.8rem;
+    margin: 0 0.5rem;
+}
+.player{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player span{
+    font-size: 0.8rem;
+}
+#player-range{
+    appearance: none;
+    background-color: transparent;
+    width: 15rem;
+    margin: 0.2rem
+
+}
+#player-range::-webkit-slider-runnable-track{
+    height: 0.25rem;
+    background-color: aliceblue;
+    border-radius: 1.5rem;
+}
+#player-range::-webkit-slider-thumb{
+    appearance: none;
+    height: 0.8rem;
+    width: 0.8rem;
+    background-color: rgb(33, 206, 33);
+    border-radius: 50%;
+    margin-top: -0.3rem;
+
+}
+/* third */
+.music-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.music-icon img{
+    height: 1rem;
+    margin: 0.3rem;
+}
+#music-icon-img1{
+    height: 2.5rem;
+}
+#music-icon-img2{
+    height: 2.5rem;
+}
+#music-icon-img3{
+    height: 2.5rem;
+}
+#player-range2{
+    appearance: none;
+    background-color: transparent;
+}
+#player-range2::-webkit-slider-runnable-track{
+    height: 0.5rem;
+    background-color: aliceblue;
+    border-radius: 1.5rem;
+}
+#player-range2::-webkit-slider-thumb{
+    appearance: none;
+}
+
+
